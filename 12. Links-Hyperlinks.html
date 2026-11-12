@@ -1,0 +1,106 @@
+<!-- Chapter Summary -->
+<!--
+Use the <a> element to define a link
+Use the href attribute to define the link address
+Use the target attribute to define where to open the linked document
+Use the <img> element (inside <a>) to use an image as a link
+Use the mailto: scheme inside the href attribute to create a link that opens the user's email program
+Use the id attribute (id="value") to define bookmarks in a page
+Use the href attribute (href="#value") to link to the bookmark
+-->
+
+<!-- HTML Links - Syntax -->
+<a href="url">Here the link</a>
+
+<!-- HTML Links - The target Attribute -->
+<a href="url" target="_blank">Click to visit</a>
+
+<!-- Absolute URLs vs. Relative URLs -->
+<h2>Absolute URLs</h2>
+<p><a href="url"></a>Google</p>
+<p><a href="url">Apple</a></p>
+<h2>Relative URLs</h2>
+<p><a href="url">Google Image</a></p>
+<p><a href="url">Apple Tutorial</a></p>
+
+<!-- HTML Links - Use an Image as a Link -->
+<a href="url.asp"></a>
+<img src="image.gif" alt="Html Tutorial" style="width: 10px;height: 10px;">
+
+<!-- Link to an Email Address -->
+<a href="mailto:someone@example.com">Send Email</a>
+
+<!-- Button as a Link -->
+<button onclick="document.location='default.asp'">
+  HTML Tutorial
+</button>
+
+<!--Link Titles -->
+<a href="url" title="Click link">Visit here</a>
+
+<!-- More on Absolute URLs and Relative URLs -->
+<a href="url/html/default.asp">Visit here</a>
+
+<!-- HTML Links - Different Colors -->
+<!-- Link Colors -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    a:link {
+      color: green;
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: pink;
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: red;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+
+    a:active {
+      color: yellow;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Link Colors</h2>
+  <p>You can change the default colors of links</p>
+  <a href="html_images.asp" target="_blank">HTML Images</a>
+</body>
+
+</html>
+
+<!-- Link Buttons -->
+<style>
+  a:link,
+  a:visited {
+    background-color: #f00000;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  a:hover,
+  a:active {
+    background-color: red;
+  }
+</style>
+
+<!-- Create a Bookmark in HTML -->
+<h2 id="C4">Chapter 1</h2>
+<a href="#C4">Jump to Chapter 1</a> <!-- add a link to the bookmark ("Jump to Chapter 4"), from within the same page -->
+<a href="html_demo.html#C4">Jump to Chapter 1</a> <!-- also can add a link to a bookmark on another page -->

@@ -1,0 +1,136 @@
+<!-- Chapter Summary -->
+<!-- 
+Use the HTML <img> element to define an image
+Use the HTML src attribute to define the URL of the image
+Use the HTML alt attribute to define an alternate text for an image, if it cannot be displayed
+Use the HTML width and height attributes or the CSS width and height properties to define the size of the image
+Use the CSS float property to let the image float to the left or to the right 
+Use the HTML <map> element to define an image map
+Use the HTML <area> element to define the clickable areas in the image map
+Use the HTML usemap attribute of the <img> element to point to an image map
+-->
+
+<!-- HTML Image Tags -->
+<!--Tag-----Description
+<img>	    Defines an image
+<map>	    Defines an image map
+<area>	    Defines a clickable area inside an image map
+<picture>	Defines a container for multiple image resources
+     -->
+    
+<!-- Images -->
+<img src="url" alt="text">
+
+<!-- Image Size - Width and Height -->
+<img src="image.jpg" alt="text" style="width: 0px;height: 0px;">
+
+<!-- Images in Another Folder -->
+<img src="/image/html5.jpg" alt="text" style="width: 0px;height: 0px;">
+
+<!-- Images on Another Server/Website -->
+<img src="https://www.Google.com/images/Google.jpg" alt="Google.com">
+
+<!-- Animated Images -->
+<img src="image.gif" alt="text">
+
+<!-- Image as a Link -->
+<a href="default.asp">
+    <img src="image.gif" alt="text">
+</a>
+
+<!-- Floating Image -->
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>Image Maps</h2>
+    <p>Click on the computer, the phone, or the cup of coffee to go to a new page and read more about the topic:</p>
+    <img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+    <map name="workmap">
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+        <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+    </map>
+</body>
+
+</html>
+
+<!-- The Image -->
+<img src="image.jpg" alt="text" usemap="#imagemap">
+
+<!-- Create Image Map -->
+<map name="imagemap"></map>
+
+<!-- The Areas -->
+<map name="workmap">
+    <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+</map>
+
+<!-- Shape="poly" -->
+<area shape="poly" coords="140,121,181,116,204,160,204,222,191,270,140,329,85,355,58,352,37,322,40,259,103,161,128,147"
+    href="croissant.html">
+
+<!-- Image Map and JavaScript -->
+<map name="workmap">
+    <area shape="circle" coords="337,300,44" href="coffee.htm" onclick="myFunction()">
+</map>
+<script>
+    function myFunction() {
+        alert("You clicked the coffee cup!");
+    }
+</script>
+
+<!-- HTML Background Images -->
+
+<!-- Background Image on an HTML element -->
+<p style="background-image: url('image.jpg');">
+
+    <!-- Background Image on a Page -->
+    <style>
+        body {
+            background-image: url('image.jpg');
+        }
+    </style>
+
+    <!-- Background Repeat -->
+    <style>
+        body {
+            background-image: url('image.jpg');
+            background-repeat: no-repeat;
+        }
+    </style>
+
+    <!-- Background Cover -->
+    <style>
+        body {
+            background-image: url('img_girl.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+
+    <!-- Background Stretch -->
+    <style>
+        body {
+            background-image: url('img_girl.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+
+    <!-- HTML <picture> Element -->
+    <!--  <picture> Element -->
+        <picture>
+            <source media="(min-width: 500px)" srcset="image.jpg">
+            <source media="(min-width: 500px)" srcset="image.jpg">
+            <img src="image.jpg">
+        </picture>
+
+<!-- Format Support -->
+ <picture>
+    <source srcset="image.jpg">
+    <source srcset="image.jpg">
+    <img src="image.jpg" alt="text" style="width: auto;">
+ </picture>
