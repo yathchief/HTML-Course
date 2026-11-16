@@ -132,35 +132,471 @@ Tag---------Description
 </style>
 
 <!-- Table Column Width -->
- <style>
-  table, th, td{
+<style>
+  table,
+  th,
+  td {
     border: 1px solid black;
     border-collapse: collapse;
   }
- </style>
- <body>
- <table style="width:100%">
-  <tr>
-    <th style="width:70%"></th>
+</style>
+
+<body>
+  <table style="width:100%">
+    <tr>
+      <th style="width:70%"></th>
     </tr>
   </table>
- </body>
+</body>
 
- <!-- Table Row Height -->
+<!-- Table Row Height -->
+<style>
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+</style>
+<body>
+  <table style="width:100px">
+       <tr>
+    <th></th>
+    <td></td>
+    <td></td>
+  </tr>
+  </table>
+  <tr style="height:200px"></tr>
+  </tr>
+</body>
+
+<!-- HTML Table Header Cells-->
+<!-- Table Header Cells -->
+<style>
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+</style>
+<body>
+  <table style="width:100%">
+  </table>
+</body>
+
+<!-- Vertical Table Headers -->
+<style>
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+</style>
+<body>
+  <table style="width:100%">
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+</body>
+
+<!-- Align Text in Header Cells -->
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th {
+  text-align: left;
+}
+</style>
+
+<!-- Header Cell that Spans Multiple Columns -->
+ <table>
+  <tr>
+    <th colspan="2">Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+</table>
+
+<!-- Table Caption -->
+ <table style="width:100%">
+  <caption>Monthly savings</caption>
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+  <tr>
+    <td>February</td>
+    <td>$50</td>
+  </tr>
+</table>
+
+<!-- HTML Table Padding and Spacing -->
+ <!-- Table - Padding and Spacing -->
   <style>
-    table, th, td{
-      border: 1px solid black;
-      border-collapse: collapse;
+  th, td{
+    padding: 15px
+  }
+  </style>
+  <!-- Cell Padding -->
+  <style>
+    th, td {
+      padding-top: 10px;
+      padding-bottom: 20px;
+      padding-left: 30px;
+      padding-right: 40px; 
     }
   </style>
-  <body>
-    <table style="width:100px">
-      <tr>
-    </table>
-    <tr style="height:200px"></tr>
-    </tr>
-  </body>
 
-  <!-- HTML Table Header Cells-->
-   <!-- Table Header Cells -->
-    
+  <!-- Cell Spacing -->
+  <style>
+    table{
+      border-spacing: 30px;
+    }
+  </style>
+
+  <!-- HTML Table Colspan and Rowspan -->
+  <!-- Colspan and Rowspan -->
+   <table>
+  <tr>
+    <th colspan="2">Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>43</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>57</td>
+  </tr>
+</table>
+
+<!-- Rowspan -->
+ <table>
+  <tr>
+    <th>Name</th>
+    <td>Jill</td>
+  </tr>
+  <tr>
+    <th rowspan="2">Phone</th>
+    <td>555-1234</td>
+  </tr>
+  <tr>
+    <td>555-8745</td>
+</tr>
+</table>
+
+<!--  HTML Table Styling -->
+  <!-- zebra-striped Table -->
+   <style>
+table {
+  width: 100%;
+}
+table, th, td {
+  border:1px solid #ddd;  
+  border-collapse: collapse;
+  padding: 8px;
+  text-align: left;
+}
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+</style>
+
+<!-- Vertical zebra-striped Table -->
+ <style>
+table {
+  width: 100%;
+}
+table, th, td {
+  border:1px solid #ddd;  
+  border-collapse: collapse;
+  padding: 8px;
+  text-align: left;
+}
+th:nth-child(even), td:nth-child(even) {
+  background-color: #D6EEEE;
+}
+</style>
+
+<!-- Combine Vertical and Horizontal Zebra Stripes -->
+ <style>
+table {
+  width: 100%;
+}
+table, th, td {
+  border:1px solid black;  
+  border-collapse: collapse;
+  padding: 8px;
+  text-align: left;
+}
+tr:nth-child(even) {
+  background-color: rgba(100, 0, 0, 0.2);
+}
+th:nth-child(even),td:nth-child(even) {
+  background-color: rgba(150, 212, 212, 0.4);
+}
+</style>
+
+<!-- Horizontal Dividers -->
+ <style>
+table {
+  width: 100%;
+}
+table, th, td {
+  border-collapse: collapse;
+  padding: 8px;
+  text-align: left;
+}
+tr {
+  border-bottom: 1px solid #ddd;
+}
+</style>
+<!-- Hoverable Table -->
+ <style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #DDD;
+}
+tr:hover {background-color: #D6EEEE;}
+</style>
+
+<!-- HTML Table Colgroup -->
+ <!--  Table Colgroup -->
+   <table style="width: 100%;">
+<colgroup>
+  <col span="2" style="background-color: #D6EEEE">
+</colgroup>
+<tr>
+<th>MON</th>
+<th>TUE</th>
+<th>WED</th>
+<th>THU</th>
+<th>FRI</th>
+<th>SAT</th>
+<th>SUN</th>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+</table>
+
+<!-- Legal CSS Properties in <col> -->
+ <table style="width:100%;">
+<colgroup>
+  <col span="5" style="background-color: #D6EEEE">
+  <col span="2" style="background-color: pink">
+</colgroup>
+<tr>
+<th>MON</th>
+<th>TUE</th>
+<th>WED</th>
+<th>THU</th>
+<th>FRI</th>
+<th>SAT</th>
+<th>SUN</th>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+</table>
+
+
+<!-- Style Last Columns -->
+ <table style="width:100%;">
+<colgroup>
+  <col span="5">
+  <col span="2" style="background-color: pink">
+</colgroup>
+<tr>
+<th>MON</th>
+<th>TUE</th>
+<th>WED</th>
+<th>THU</th>
+<th>FRI</th>
+<th>SAT</th>
+<th>SUN</th>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+</table>
+
+<!-- Hide Columns -->
+ <table style="width:100%;">
+<colgroup>
+  <col span="5">
+  <col span="2" style="visibility:collapse">
+</colgroup>
+<tr>
+<th>MON</th>
+<th>TUE</th>
+<th>WED</th>
+<th>THU</th>
+<th>FRI</th>
+<th>SAT</th>
+<th>SUN</th>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+</table>
