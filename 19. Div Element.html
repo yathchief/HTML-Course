@@ -1,0 +1,75 @@
+<!-- HTML Div Element -->
+ <!--  
+Tag---Description
+<div>	Defines a section in a document (block-level)
+ -->
+<!-- The <div> Element -->
+Hello <div>I am a div</div> Adam.
+
+<!-- Use <div> as a Container-->
+<div>
+    <h2>London</h2>
+    <p>London is the capital city of England. It is the most populous city in the United Kingdom.</p>
+</div>
+
+<!-- Center-align a <div> Element -->
+<style>
+    div {
+        width: 300px;
+        margin: auto;
+    }
+</style>
+
+<!-- Multiple <div> Elements -->
+<div>
+    <h2>London</h2>
+    <p>London is the capital city of England.</p>
+</div>
+<div>
+    <h2>Oslo</h2>
+    <p>Oslo is the capital city of Norway.</p>
+</div>
+<div>
+    <h2>Rome</h2>
+    <p>Rome is the capital city of Italy.</p>
+</div>
+
+<!-- Align <div> Elements Side by Side  (Using CSS Flexbox)-->
+<style>
+    .container {
+        display: flex;
+    }
+
+    .container div {
+        width: 33%;
+    }
+</style>
+
+<div class="container">
+    <div>
+        <h2>London</h2>
+        <p>London is...</p>
+    </div>
+    <div>
+        <h2>Oslo</h2>
+        <p>Oslo is...</p>
+    </div>
+    <div>
+        <h2>Rome</h2>
+        <p>Rome is...</p>
+    </div>
+</div>
+
+<!--Using CSS Grid -->
+<style>
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+</style>
+
+<div class="container">
+  <div><h2>London</h2><p>London is...</p></div>
+  <div><h2>Oslo</h2><p>Oslo is...</p></div>
+  <div><h2>Rome</h2><p>Rome is...</p></div>
+</div>
