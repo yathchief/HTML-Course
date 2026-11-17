@@ -1,0 +1,103 @@
+<!-- HTML Drag and Drop API -->
+<!-- Drag and Drop API -->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script>
+        function dragstartHandler(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function dragoverHandler(ev) {
+            ev.preventDefault();
+        }
+
+        function dropHandler(ev) {
+            ev.preventDefault();
+            const data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="div1" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"></div>
+
+    <img id="img1" src="img_logo.gif" draggable="true" ondragstart="dragstartHandler(event)" width="336" height="69">
+
+</body>
+
+</html>
+
+<!-- Make an Element Draggable -->
+<img id="img1" draggable="true">
+<!-- OR -->
+<p id="p1" draggable="true">Draggable text</p>
+
+<!-- What to Drag - ondragstart and setData() -->
+function dragstartHandler(ev) {
+ev.dataTransfer.setData("text", ev.target.id);
+}
+
+<!-- Where to Drop - ondragover -->
+function dragoverHandler(ev) {
+ev.preventDefault();
+}
+
+<!-- Do the Drop - ondrop -->
+function dropHandler(ev) {
+ev.preventDefault();
+const data = ev.dataTransfer.getData("text");
+ev.target.appendChild(document.getElementById(data));
+}
+
+<!-- Drag and drop an <h1> element to a <div> element -->
+<script>
+    function dragstartHandler(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function dragoverHandler(ev) {
+        ev.preventDefault();
+    }
+
+    function dropHandler(ev) {
+        ev.preventDefault();
+        const data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+</script>
+</head>
+
+<body>
+
+    <div id="div1" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"></div>
+
+    <h1 id="h1" draggable="true" ondragstart="dragstartHandler(event)">W3Schools.com</h1>
+
+    <!-- Drag and drop an <a> element to a <div> element-->
+    <script>
+        function dragstartHandler(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function dragoverHandler(ev) {
+            ev.preventDefault();
+        }
+
+        function dropHandler(ev) {
+            ev.preventDefault();
+            const data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+    </head>
+
+    <body>
+
+        <div id="div1" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"></div>
+
+        <a id="link1" href="https://w3schools.com" draggable="true"
+            ondragstart="dragstartHandler(event)">W3Schools.com</a>
