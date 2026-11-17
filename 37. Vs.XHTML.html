@@ -1,0 +1,86 @@
+<!-- HTML Versus XHTML -->
+ <!-- What is XHTML? -->
+  <!--
+ XHTML stands for EXtensible HyperText Markup Language
+XHTML is a stricter, more XML-based version of HTML
+XHTML is HTML defined as an XML application
+XHTML is supported by all major browsers-->
+
+<!-- Important Differences from HTML -->
+<!--
+<!DOCTYPE> is mandatory
+The xmlns attribute in <html> is mandatory
+<html>, <head>, <title>, and <body> are mandatory
+Elements must always be properly nested
+Elements must always be closed
+Elements must always be in lowercase
+Attribute names must always be in lowercase
+Attribute values must always be quoted
+Attribute minimization is forbidden
+-->
+
+<!-- XHTML - <!DOCTYPE ....> Is Mandatory -->
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Title of document</title>
+</head>
+<body>
+  some content here...
+</body>
+</html>
+
+<!-- XHTML Elements Must be Properly Nested -->
+ <!-- Correct -->
+  <b><i>Some text</i></b>
+  <!-- Wrong -->
+   <b><i>Some text</b></i>
+
+   <!-- XHTML Elements Must Always be Closed -->
+    <!-- Correct -->
+<p>This is a paragraph</p>
+<p>This is another paragraph</p>
+    <!-- Wrong -->
+<p>This is a paragraph
+<p>This is another paragraph
+
+<!-- XHTML Empty Elements Must Always be Closed -->
+ <!-- Correct -->
+  A break: <br />
+A horizontal rule: <hr />
+An image: <img src="happy.gif" alt="Happy face" />
+  <!-- Wrong -->
+   A break: <br>
+A horizontal rule: <hr>
+An image: <img src="happy.gif" alt="Happy face">
+
+<!-- XHTML Elements Must be in Lowercase -->
+ <!-- Correct -->
+<body>
+<p>This is a paragraph</p>
+</body>
+ <!-- Wrong -->
+<BODY>
+<P>This is a paragraph</P>
+</BODY>
+
+<!-- XHTML Attribute Names Must be in Lowercase -->
+ <!-- Correct -->
+<a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
+ <!-- Wrong -->
+  <a HREF="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
+
+  <!-- XHTML Attribute Values Must be Quoted -->
+   <!-- Correct -->
+<a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
+   <!-- Wrong -->
+<a href=https://www.w3schools.com/html/>Visit our HTML tutorial</a>
+
+<!-- XHTML Attribute Minimization is Forbidden -->
+ <!-- Correct -->
+<input type="checkbox" name="vehicle" value="car" checked="checked" />
+<input type="text" name="lastname" disabled="disabled" />
+ <!-- Wrong -->
+  <input type="checkbox" name="vehicle" value="car" checked />
+<input type="text" name="lastname" disabled />
